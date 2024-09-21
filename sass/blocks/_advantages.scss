@@ -1,0 +1,99 @@
+.adv-section {
+  padding: int(70,110) 0;
+  background: #19191B;
+  color: white;
+  position: relative;
+  .title {
+    max-width: 740px;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.adv-subtitle {
+  margin-top: 20px;
+  max-width: 690px;
+  font-size: int(18,24);
+}
+
+.adv-support-title {
+  margin-top: 40px;
+  font-size: int(22,32);
+}
+
+.adv-list-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.adv-list-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  li {
+    font-size: int(18,26);
+    font-weight: 300;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      aspect-ratio: 1;
+      background: url("../img/advantages/list-item.svg") center center / contain no-repeat;
+      flex-shrink: 0;
+      position: relative;
+      top: 4px;
+    }
+  }
+}
+
+.adv-price-wrapper {
+  margin-top: 40px;
+  padding: int(20,40);
+  background: url("../img/advantages/price-block-bg.png") left 103% center/auto 100% no-repeat, var(--text-dark);
+  p {
+    max-width: 665px;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: int(25,40);
+  }
+  button {
+    margin-top: 40px;
+    width: 410px;
+  }
+}
+
+.adv-right-bg {
+  position: absolute;
+  left: 48%;
+  top: -21%;
+}
+
+@include m(991) {
+  .adv-right-bg {
+    display: none;
+  }
+}
+
+@include m(767) {
+  .adv-list-wrapper {
+    grid-template-columns: 100%;
+  }
+  .adv-price-wrapper {
+    background-image: none;
+  }
+}
+
+@include m(575) {
+  .adv-subtitle {
+    font-size: 16px;
+  }
+  .adv-list-column li {
+    font-size: 16px;
+  }
+}

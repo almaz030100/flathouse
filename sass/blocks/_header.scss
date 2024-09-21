@@ -1,0 +1,64 @@
+.header {
+  padding-top: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: int(10,20);
+}
+
+.header-title {
+  max-width: 198px;
+  font-size: int(14,16);
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  img {
+    transition: 0.2s all;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.call-phone {
+  font-size: int(17,22);
+  font-weight: 600;
+}
+
+.call-order {
+  font-size: int(14,16);
+  display: block;
+}
+
+@include m(575) {
+  .call img {
+    display: none;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .header-logo {
+    width: 60px;
+  }
+}

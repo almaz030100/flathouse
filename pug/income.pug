@@ -1,0 +1,42 @@
+-
+  var items = [
+    {
+      title: '2 144 322 руб',
+      text: 'Средняя ежемесячная выручка',
+    },
+    {
+      title: '14 507 270 руб',
+      text: 'Чистая прибыль <br> за 3 года',
+      img: 'img/income/bg-item-2.png',
+      type: 'white',
+    },
+    {
+      title: '8 месяцев',
+      text: 'Период окупаемости',
+    },
+    {
+      title: '402 980 руб',
+      text: 'Средняя чистая <br> ежемесячная <br> прибыль',
+      img: 'img/income/bg-item-4.png',
+      type: 'white',
+    },
+    {
+      title: '3 268 000 руб',
+      text: 'Чистая прибыль за 1-й год',
+      img: 'img/income/bg-item-5.png',
+      type: 'black',
+    },
+  ]
+
+section.income-section
+  .container
+    h2.title.tac Сколько вы будете <span class="title-red">зарабатывать</span> с франшизой FLATHOUSEDESIGN
+    .income-subtitle.tac Благодаря наработанному опыту головной компании как с частными, так и с корпоративными клиентами, совершая всего 4–5 продаж в месяц, вы сможете выйти на запланированный уровень дохода.
+    .income-grid
+      each item, idx in items
+        .income-item(class=`income-item-${idx + 1}`, class=item.type ? `income-item-${item.type}` : '')
+          span= item.title
+          p !{item.text}
+          if item.img
+            img(src=item.img, alt='img')
+    .income-bottom-text Подробные расчёты представлены в финансовой модели.

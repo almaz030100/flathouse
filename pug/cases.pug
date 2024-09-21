@@ -1,0 +1,102 @@
+-
+  var items = [
+    {
+      title: 'Дизайн квартиры ЖК «Карлутский»',
+      photosCount: 14,
+      square: '39,5 кв.м',
+      customer: 'Семья и молодой сын',
+      budget: '1 185 000 руб.',
+    },
+    {
+      title: 'Дизайн-проект квартиры ЖК «Панорама»',
+      photosCount: 32,
+      square: '62,7 кв.м',
+      customer: 'Семейная пара',
+      budget: '3 135 000 руб.',
+    },
+    {
+      title: 'Дизайн-проект квартиры в г. Ялта ЖК «Омега»',
+      photosCount: 71,
+      square: '114 кв.м',
+      customer: 'Семейная пара, муж с женой',
+      budget: '9 000 000 руб.',
+    },
+    {
+      title: 'Дизайн-проект квартиры ЖК «Трилогия»',
+      photosCount: 61,
+      square: '130 кв.м',
+      customer: 'Семейная пара с тремя детьми (все девочки)',
+      budget: '9 500 000 руб.',
+    },
+    {
+      title: 'Создание пространства в современном стиле',
+      photosCount: 33,
+      square: '46 кв.м',
+      customer: 'Молодая семья с сыном',
+      budget: '3 000 000 руб.',
+    },
+    {
+      title: '3+ квартира в жилом комплексе «5 Континентов»',
+      photosCount: 44,
+      square: '70 кв.м',
+      customer: 'Молодой человек',
+      budget: '4 200 000 руб.',
+    },
+  ]
+
+-
+  var infoCards = [
+    {
+      title: 'Площадь объекта',
+      img: 'img/cases/square.svg',
+      name: 'square',
+    },
+    {
+      title: 'Заказчик',
+      img: 'img/cases/customer.svg',
+      name: 'customer',
+    },
+    {
+      title: 'Бюджет',
+      img: 'img/cases/budget.svg',
+      name: 'budget',
+    },
+  ]
+
+-
+  var treasures = [
+    'Приносить людям пользу',
+    'Делать качественный продукт',
+    'Совместить удобство и красоту',
+    'Постоянно учиться у тех, кто круче тебя',
+  ]
+
+section.cases-section
+  .container
+    h2.title.tac Наши <span class="title-red">работы</span>
+    .cases-wrapper
+      each item, idx in items
+        .cases-item
+          .cases-item-title= item.title
+          img.cases-item-main-photo(src=`img/cases/case-${idx + 1}/1.jpg`, alt='photo', data-fancybox=`cases-gallery-${idx + 1}`)
+          .cases-item-photos-wrapper
+            each count in [...Array(item.photosCount + 1).keys()].filter(item => ![0, 1].includes(item))
+              img(
+                src=`img/cases/case-${idx + 1}/${count}.jpg`,
+                alt='photo',
+                style=count > 7 ? 'display: none' : '',
+                data-fancybox=`cases-gallery-${idx + 1}`
+              )
+          .cases-item-info-wrapper
+            each card in infoCards
+              .cases-item-info-card
+                .cases-item-info-card-title
+                  img(src=card.img)
+                  span= card.title
+                .cases-item-info-card-value= item[card.name]
+    .cases-bottom-title.tac Ключевые ценности компании
+    .cases-treasures-wrapper
+      each treasure, idx in treasures
+        .cases-treasures-item
+          img(src=`img/cases/treasure-${idx + 1}.svg`)
+          p= treasure

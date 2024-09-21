@@ -1,0 +1,21 @@
+@function int($f-min, $f-max, $units: px) {
+
+    $k: calc(($f-max - $f-min) / (1440 - 767));
+    $b: $f-min - $k * 767;
+
+    $b: $b + $units;
+
+    $cl-min: $f-min + $units;
+    $cl-max: $f-max + $units;
+
+    @return clamp($cl-min, calc(#{$k} * 100vw + #{$b}), $cl-max);
+
+}
+
+@mixin m($maxWidth) {
+
+    @media (max-width: #{$maxWidth + 'px'}){
+        @content;
+    }
+
+}

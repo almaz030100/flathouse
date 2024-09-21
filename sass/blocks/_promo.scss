@@ -1,0 +1,85 @@
+.promo-section {
+  padding-top: int(180,224);
+  background: url("../img/promo/bg.jpg") left bottom / cover no-repeat;
+  color: #fff;
+}
+
+.promo-title {
+  max-width: 927px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: int(40,58);
+}
+
+.promo-subtitle {
+  max-width: 730px;
+  display: flex;
+  align-items: center;
+  gap: int(10,20);
+  margin-top: 30px;
+  font-size: int(24,32);
+  img {
+    //position: relative;
+    //top: 10px;
+  }
+}
+
+.promo-button {
+  margin-top: int(40,52);
+  width: 393px;
+}
+
+.promo-splide {
+  margin-top: int(60,113);
+  border: 1px solid #45454D;
+  padding: int(20,30);
+}
+
+.promo-advantages-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  @include m(991) {
+    flex-direction: column;
+    align-items: flex-start;
+    br {
+      display: none;
+    }
+    gap: 20px;
+  }
+}
+
+.promo-advantages-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: int(18,28);
+  img {
+    width: int(20,40);
+  }
+}
+
+@include m(575) {
+  .promo-section {
+    padding-top: 120px;
+  }
+  .promo-title {
+    font-size: 26px;
+  }
+  .promo-subtitle {
+    font-size: 18px;
+  }
+  .promo-advantages-wrapper {
+    flex-direction: initial;
+    gap: 0;
+    justify-content: initial;
+    br {
+      display: initial;
+    }
+  }
+  .promo-advantages-item {
+    justify-content: center;
+  }
+  .promo-splide {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,35 @@
+-
+  var items = [
+    {
+      img: 'img/promo/item-1.svg',
+      text: 'Научим управлять студией <br>' +
+              'с минимальным участием <br>' +
+              'собственника'
+    },
+    {
+      img: 'img/promo/item-2.svg',
+      text: 'Передадим первых <br>' +
+              'клиентов'
+    },
+    {
+      img: 'img/promo/item-3.svg',
+      text: 'Отлаженная работа <br>' +
+              'в b2b и b2c'
+    },
+  ]
+
+section.promo-section
+  .container
+    h1.promo-title Франшиза FLATHOUSEDESIGN: начните бизнес в сфере дизайна интерьера при поддержке опытного партнёра
+    .promo-subtitle
+      img(src='img/promo/list-item.svg', alt='list-item')
+      span Творческий бизнес с высоким средним чеком и чистой прибылью от 400 000 ₽ в месяц
+    button.btn.promo-button
+      span Получить презентацию
+    .splide.promo-splide
+      .splide__track
+        .splide__list.promo-advantages-wrapper
+          each item in items
+            .splide__slide.promo-advantages-item
+              img(src=item.img, alt='logo')
+              span !{item.text}

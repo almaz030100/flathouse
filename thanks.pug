@@ -1,0 +1,15 @@
+include pug/modal.pug
+
+doctype html
+html(lang='ru')
+  include pug/head.pug
+  body
+    .pagewrapper.pagewrapper_thanks
+      main.main_thanks
+        include pug/thanks-section.pug
+
+
+    include pug/modal-policy.html
+    +modal('modal-2', 'Закажите звонок и задайте вопросы о сотрудничестве менеджеру', 'Заказать звонок')
+
+    include pug/scripts.pug

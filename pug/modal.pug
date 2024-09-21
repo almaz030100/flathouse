@@ -1,0 +1,13 @@
+mixin modal(id, title, button)
+  .modal(id=id)
+    .modal-wrapper
+      form
+        .modal-title= title
+        .modal-inputs-wrapper
+          include form-input-phone
+          include form-input-name
+          include form-input-email
+        .modal-bottom-wrapper
+          button.button.modal-button
+            span= button
+          include form-policy

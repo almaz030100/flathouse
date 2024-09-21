@@ -1,0 +1,129 @@
+.main_thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pagewrapper_thanks {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main_thanks {
+  background: url("../img/thanks/bg.jpg") left top / cover no-repeat;
+}
+
+.thanks {
+  padding: 165px 0 int(60, 100);
+  color: #fff;
+}
+
+.thanks-title {
+  max-width: 980px;
+  font-size: int(25, 40);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  span {
+    color: #FFD175;
+  }
+}
+
+.thanks-subtitle {
+  margin-top: int(30, 50);
+  max-width: 790px;
+  font-size: int(20, 30);
+  font-weight: 700;
+}
+
+.thanks-schedule-wrapper {
+  margin-top: int(30, 50);
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: int(25,50);
+}
+
+.thanks-schedule-item {
+  display: flex;
+  align-items: center;
+  gap: int(10,20);
+  img {
+    width: int(30,45);
+  }
+  span {
+    font-size: int(15,18);
+    font-weight: 700;
+  }
+  p {
+    margin-top: 10px;
+    font-size: int(15,18);
+  }
+}
+
+.thanks-weekend {
+  margin-top: 20px;
+  max-width: 834px;
+  font-size: int(15,20);
+}
+
+.thanks-links-wrapper {
+  margin-top: int(30,50);
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: int(25,50);
+}
+
+.thanks-link-item {
+  display: flex;
+  align-items: center;
+  gap: int(10,15);
+  img {
+    transition: 0.3s all;
+    flex-shrink: 0;
+  }
+  span {
+    font-size: int(15,20);
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.thanks-back {
+  display: block;
+  margin-top: int(30,50);
+  text-decoration: underline;
+  font-size: int(15,20);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@include media(991) {
+  .thanks-links-wrapper {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+
+@include media(575) {
+  .thanks-subtitle {
+    font-size: 17px;
+  }
+  .thanks-title {
+    font-size: 20px;
+  }
+  .thanks-schedule-wrapper {
+    grid-template-columns: 100%;
+  }
+  .thanks {
+    padding-top: 120px;
+  }
+}

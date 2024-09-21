@@ -1,0 +1,91 @@
+.history-section {
+  padding: int(70,90) 0;
+  background: url("../img/history/bg.jpg") right bottom / cover no-repeat;
+  position: relative;
+}
+
+.history-content {
+  max-width: 57%;
+  margin-left: auto;
+}
+
+.history-subtitle {
+  margin-top: 20px;
+  font-size: int(22,32);
+  max-width: 690px;
+}
+
+.history-text {
+  margin-top: int(40,60);
+  font-size: int(18,26);
+  display: flex;
+  flex-direction: column;
+  gap: int(15,30);
+}
+
+.history-button {
+  width: 398px;
+  margin-top: 30px;
+}
+
+.history-owner-text {
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(15.5px);
+  padding: 20px int(10,20);
+  color: white;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  bottom: 14%;
+  left: 10%;
+  span {
+    font-family: "Tenor Sans", sans-serif;
+    font-size: int(16,22);
+  }
+  p {
+    margin-top: 10px;
+    font-size: int(15,20);
+  }
+}
+
+.history-owner {
+  position: absolute;
+  bottom: 0;
+  right: 62%;
+  max-height: 100%;
+}
+
+@include m(767) {
+  .history-content {
+    max-width: 100%;
+  }
+  .history-owner {
+    position: static;
+    max-width: 80%;
+    margin: 0 auto;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .history-section {
+    padding-bottom: 0;
+  }
+  .history-owner-text {
+    left: 39%;
+  }
+}
+
+@include m(575) {
+  .history-subtitle {
+    font-size: 16px;
+  }
+  .history-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .history-owner-text {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+  }
+}

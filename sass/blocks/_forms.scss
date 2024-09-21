@@ -1,0 +1,91 @@
+.form-input  {
+  height: int(60,80);
+  width: 100%;
+  background: left 15px top 50% no-repeat, #F0F0F0;
+  border-radius: 7px;
+  border-style: none;
+  padding-left: 45px;
+  padding-right: 10px;
+  font-size: 15px;
+  &::placeholder {
+    color: rgba(75, 78, 83, 0.5);
+  }
+  &[name="phone"] {
+    background-image: url('../img/form/phone.svg');
+  }
+  &[name="email"] {
+    background-image: url('../img/form/email.svg');
+  }
+  &[name="name"] {
+    background-image: url('../img/form/name.svg');
+  }
+}
+
+.openform {
+  margin-top: int(40,75);
+  border-radius: 25px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(255, 255, 255);
+  padding: int(30,50) int(20,50);
+
+  .form-policy {
+    margin: 20px auto 0;
+    max-width: 1015px;
+  }
+}
+
+.openform-title {
+  color: rgb(224, 166, 49);
+  font-size: int(24,32);
+  font-weight: 700;
+  text-align: center;
+}
+
+.openform-inputs {
+  margin-top: int(30,50);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: int(10,20);
+  @include media(991) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(575) {
+    grid-template-columns: 100%;
+  }
+}
+
+.openform-button {
+  width: 100%;
+  height: int(60,80);
+  span {
+    font-size: 14px;
+  }
+}
+
+.form-policy {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  opacity: 0.3;
+  font-size: 11px;
+  font-weight: 500;
+  img {
+    position: relative;
+    bottom: 7px;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+label.error {
+  display: none !important;
+}
+
+input.error {
+  outline: 1px solid #ff3e3e;
+  border: none;
+}

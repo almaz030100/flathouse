@@ -1,0 +1,113 @@
+.cases-section {
+  padding: int(70,110) 0;
+  background: #F6F6F6;
+}
+
+.cases-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cases-item {
+  background: white;
+  padding: 20px;
+}
+
+.cases-item-title {
+  font-size: int(20,28);
+}
+
+.cases-item-main-photo {
+  width: 100%;
+  margin-top: 20px;
+  aspect-ratio: 650/385;
+  cursor: pointer;
+  transition: 0.2s all;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.cases-item-photos-wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cases-item-info-wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: int(10,20);
+}
+
+.cases-item-info-card {
+  border: 1px solid #EBEBEB;
+  padding: 10px;
+}
+
+.cases-item-info-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: int(14,16);
+}
+
+.cases-item-info-card-value {
+  margin-top: 10px;
+  font-size: int(14,16);
+}
+
+.cases-bottom-title {
+  margin-top: 38px;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: int(22,32);
+}
+
+.cases-treasures-wrapper {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cases-treasures-item {
+  background: white;
+  padding: 20px;
+  p {
+    margin-top: int(30,40);
+    font-size: int(18,24);
+  }
+}
+
+@include m(991) {
+  .cases-wrapper {
+    grid-template-columns: 100%;
+  }
+}
+
+@include m(767) {
+  .cases-treasures-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@include m(575) {
+  .cases-item-info-wrapper {
+    grid-template-columns: 100%;
+  }
+}
