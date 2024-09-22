@@ -85,7 +85,8 @@ section.cases-section
                 src=`img/cases/case-${idx + 1}/${count}.jpg`,
                 alt='photo',
                 style=count > 7 ? 'display: none' : '',
-                data-fancybox=`cases-gallery-${idx + 1}`
+                data-fancybox=`cases-gallery-${idx + 1}`,
+                loading='lazy'
               )
           .cases-item-info-wrapper
             each card in infoCards
