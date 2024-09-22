@@ -68,28 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }).mount()
 
   }
-
-  // Аккордеоны
-  if (isMainPage) {
-    // new ItcAccordion('#accordion-1', {alwaysOpen: false})
-    // new ItcAccordion('#accordion-2', {alwaysOpen: false})
-  }
-
-  // Устанавливаем текущий год в футере
-  {
-    let span = document.querySelectorAll('[data-year]')
-    let year = new Date().getFullYear()
-    span.forEach(item => {
-      item.textContent = year.toString()
-    })
-  }
 })
 
 
 // Показываем модальное окно при уходе со страницы
 window.addEventListener('load', () => {
   const isMainPage = !!document.querySelector('#pageMain')
-
   function t() {
     Fancybox.show(
       [
@@ -103,7 +87,6 @@ window.addEventListener('load', () => {
       }
     )
   }
-
   function scriptModal(e) {
     if (e.clientY > document.documentElement.clientHeight / 2) {
       $(document).one("mouseleave", function (e) {
@@ -112,8 +95,7 @@ window.addEventListener('load', () => {
       document.removeEventListener('mousemove', scriptModal)
     }
   }
-
-  // if (isMainPage) {
-  //   document.addEventListener('mousemove', scriptModal)
-  // }
+  if (isMainPage) {
+    document.addEventListener('mousemove', scriptModal)
+  }
 })

@@ -10,120 +10,165 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.main_thanks {
-  background: url("../img/thanks/bg.jpg") left top / cover no-repeat;
-}
-
-.thanks {
-  padding: 165px 0 int(60, 100);
-  color: #fff;
-}
-
-.thanks-title {
-  max-width: 980px;
-  font-size: int(25, 40);
-  font-weight: 700;
-  text-transform: uppercase;
-
-  span {
-    color: #FFD175;
+  .header {
+    color: var(--text-dark);
+    z-index: 1;
   }
 }
 
-.thanks-subtitle {
-  margin-top: int(30, 50);
-  max-width: 790px;
-  font-size: int(20, 30);
-  font-weight: 700;
+.main_thanks {
+  background: url("../img/thanks/bg.jpg") left center / cover no-repeat;
 }
 
-.thanks-schedule-wrapper {
-  margin-top: int(30, 50);
-  max-width: 700px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: int(25,50);
+.thanks {
+  padding: int(148,168) 0 int(50,75);
+  position: relative;
+}
+
+.thanks-title {
+  max-width: 674px;
+  font-size: int(25,38);
+  line-height: 1.3;
+  letter-spacing: 0.76px;
+  span {
+    color: var(--text-accent);
+    font-family: "Tenor Sans", sans-serif;
+    font-size: int(40,80);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: int(15,22);
+  }
+}
+
+.thanks-block {
+  background: white;
+  box-shadow: 4px 20px 40px 0px rgba(180, 180, 180, 0.15);
+  padding: int(15,30);
+  max-width: 910px;
+  margin-top: 30px;
+}
+
+.thanks-schedule-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .thanks-schedule-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: int(10,20);
+  font-size: int(14,18);
   img {
-    width: int(30,45);
-  }
-  span {
-    font-size: int(15,18);
-    font-weight: 700;
+    width: int(30,50);
   }
   p {
-    margin-top: 10px;
-    font-size: int(15,18);
+    margin-top: 4px;
+    font-weight: 600;
+    color: var(--text-accent);
+    span {
+      color: #1FB912;
+    }
   }
 }
 
 .thanks-weekend {
   margin-top: 20px;
-  max-width: 834px;
   font-size: int(15,20);
 }
 
 .thanks-links-wrapper {
-  margin-top: int(30,50);
-  max-width: 900px;
+  margin-top: 40px;
+  max-width: 910px;
   display: flex;
-  align-items: center;
-  gap: int(25,50);
+  flex-wrap: wrap;
+  gap: int(20,40);
 }
 
 .thanks-link-item {
   display: flex;
+  gap: int(10,20);
   align-items: center;
-  gap: int(10,15);
+  font-size: int(16,24);
   img {
-    transition: 0.3s all;
-    flex-shrink: 0;
-  }
-  span {
-    font-size: int(15,20);
+    transition: 0.2s all;
   }
   &:hover {
     img {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 }
 
 .thanks-back {
   display: block;
-  margin-top: int(30,50);
-  text-decoration: underline;
-  font-size: int(15,20);
-  &:hover {
-    text-decoration: none;
+  margin-top: int(35,47);
+  width: 435px;
+  button {
+    height: int(60,79);
+    span {
+      font-size: int(14,16);
+    }
   }
 }
 
-@include media(991) {
-  .thanks-links-wrapper {
+.thanks-owner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 67%;
+  display: inline-block;
+  max-width: 517px;
+  width: 28%;
+  div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding: int(10,20);
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(15.5px);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    span {
+      font-family: "Tenor Sans", sans-serif;
+      font-size: int(15,22);
+    }
+    p {
+      margin-top: 10px;
+      font-size: int(15,20);
+    }
+  }
+  @include m(1399) {
+    position: relative;
+    transform: initial;
+    top: initial;
+    left: initial;
+    width: 100%;
+    margin-top: 30px;
+  }
+  @include m(991) {
+    max-width: 400px;
+  }
+}
+
+@include m(767) {
+  .thanks-schedule-items {
     flex-wrap: wrap;
-    row-gap: 20px;
+    justify-content: flex-start;
   }
 }
 
-@include media(575) {
-  .thanks-subtitle {
-    font-size: 17px;
+@include m(575) {
+  .thanks-title span {
+    font-size: 30px;
   }
   .thanks-title {
     font-size: 20px;
   }
-  .thanks-schedule-wrapper {
-    grid-template-columns: 100%;
-  }
-  .thanks {
-    padding-top: 120px;
+  .thanks-back {
+    width: 100%;
   }
 }

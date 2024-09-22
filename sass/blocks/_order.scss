@@ -1,0 +1,63 @@
+.order-section {
+  padding: int(70,110) 0;
+  background: url("../img/order/bg.jpg") left center / cover no-repeat;
+}
+
+.order-content {
+  max-width: 956px;
+}
+
+.order-subtitle {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: int(10,20);
+  font-size: int(20,28);
+  span {
+    color: var(--text-accent);
+  }
+  &:before {
+    content: url('../img/order/subtitle-icon.svg');
+  }
+}
+
+.order-feedback-title {
+  margin-top: 30px;
+  font-size: int(20,28);
+  font-weight: 500;
+}
+
+.order-feedback-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: int(8,14);
+  font-size: int(20,28);
+  li {
+    display: flex;
+    gap: int(10,20);
+    align-items: flex-start;
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      aspect-ratio: 1;
+      background: url(../img/advantages/list-item.svg) center center / contain no-repeat;
+      flex-shrink: 0;
+      position: relative;
+      top: 4px;
+    }
+  }
+}
+
+@include m(575) {
+  .order-subtitle {
+    font-size: 16px;
+  }
+  .order-feedback-title {
+    font-size: 16px;
+  }
+  .order-feedback-list {
+    font-size: 16px;
+  }
+}

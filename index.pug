@@ -1,3 +1,5 @@
+include pug/modal.pug
+
 doctype html
 html(lang='ru')
   include pug/head.pug
@@ -11,5 +13,14 @@ html(lang='ru')
         include pug/cases.pug
         include pug/advantages.pug
         include pug/income.pug
+        include pug/order.pug
+      include pug/footer.pug
+
+    include pug/modal-policy.html
+    +modal('modal-1', 'Оставьте заявку и получите презентацию франшизы', 'Получить презентацию', 'img/modal/bg-modal-1.png')
+    +modal('modal-2', 'Присоединяйтесь к команде FLATHOUSEDESIGN и зарабатывайте на разработке интерьерного дизайна', 'Подробнее о компании', 'img/modal/bg-modal-2.png')
+    +modal('modal-3', 'Узнайте подробнее о запуске бизнеса в партнёрстве с FLATHOUSEDESIGN', 'Подробнее о поддержке', 'img/modal/bg-modal-3.png')
+    +modal('modal-4', 'Задайте вопросы о франшизе менеджеру компании FLATHOUSEDESIGN', 'Заказать звонок', 'img/modal/bg-modal-4.png')
+    +modal('modal-5', 'Получите индивидуальный расчёт финансовой модели по франшизе', 'Получить финмодель', 'img/modal/bg-modal-5.png')
 
     include pug/scripts.pug

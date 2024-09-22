@@ -1,28 +1,65 @@
+-
+  var scheduleItems = [
+    {
+      title: 'График работы <br> компании:',
+      subtitle: '<span>пн вт ср чт пт</span> сб вс',
+      img: 'img/thanks/schedule.svg',
+    },
+    {
+      title: 'По нашему местному <br> времени в г. Ижевске:',
+      subtitle: 'с 9:00 до 18:00',
+      img: 'img/thanks/work-time.svg',
+    },
+    {
+      title: 'По московскому <br> времени:',
+      subtitle: 'с 08:00 до 17:00',
+      img: 'img/thanks/work-time.svg',
+    },
+  ]
+
+-
+  var linksItems = [
+    {
+      title: 'Отзывы клиентов <br> на Houzz:',
+      img: 'img/thanks/houzz.png',
+      url: 'https://www.houzz.ru/professionaly/dizaynery-interyera/oksana-tretyyakova-dizayner-interyerov-pfvwru-pf~791003212',
+    },
+    {
+      title: 'Отзывы клиентов <br> на 2gis:',
+      img: 'img/thanks/2gis.svg',
+      url: 'https://2gis.ru/izhevsk/firm/70000001053513489/tab/reviews',
+    },
+    {
+      title: 'Главный сайт <br> бренда:',
+      img: 'img/thanks/main-logo.png',
+      url: 'https://tretyakova18.ru/',
+    },
+  ]
+
+
 .thanks
   .container
     .thanks-wrapper
-      h1.thanks-title <span id="thanksName">[Имя],</span> благодарим Вас за обращение в компанию «Форсаж»®
-      .thanks-subtitle Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
-      .thanks-schedule-wrapper
-        .thanks-schedule-item
-          img(src='img/thanks/schedule-1.svg', alt='schedule-1')
-          div
-            span График работы компании:
-            p Без выходных
-        .thanks-schedule-item
-          img(src='img/thanks/schedule-2.svg', alt='schedule-2')
-          div
-            span По московскому времени:
-            p с 8:00 до 22:00
-      .thanks-weekend Если Вы оставили заявку в нерабочее время или в выходной/праздничный день — мы перезвоним Вам в ближайший рабочий день.
+      h1.thanks-title <span id="thanksName">[Имя],</span> благодарим Вас за обращение в компанию FLATHOUSEDESIGN®
+      .thanks-block
+        .thanks-schedule-items
+          each item in scheduleItems
+            .thanks-schedule-item
+              img(src=item.img, alt='icon')
+              div
+                span !{item.title}
+                p !{item.subtitle}
+        .thanks-weekend Если Вы оставили заявку в нерабочее время или в выходной/праздничный день — мы перезвоним Вам в ближайший рабочий день.
       .thanks-links-wrapper
-        a.thanks-link-item(href='https://vk.com/forsage_ld', target='_blank')
-          span О жизни проекта в соцсети:
-          img(src='img/thanks/vk.svg', alt='vk')
-        a.thanks-link-item(href='https://yandex.ru/maps/37141/likino-dulevo/?from=tabbar&ll=38.951728%2C55.731541&mode=poi&poi%5Bpoint%5D=38.949908%2C55.731487&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1152131975&source=serp_navig&z=17', target='_blank')
-          span Отзывы клиентов:
-          img(src='img/thanks/yandex-maps.svg', alt='yandex-maps')
-        a.thanks-link-item(href='https://forsage-oz.ru/', target='_blank')
-          span Главный сайт:
-          img(src='img/thanks/main-site.png', alt='main-site')
-      a.thanks-back(href='index.html') Вернуться на основную страницу
+        each item in linksItems
+          a.thanks-link-item(href=item.url, target='_blank')
+            span !{item.title}
+            img(src=item.img, alt='icon')
+      a.thanks-back(href='index.html')
+        button.btn
+          span Вернуться на основную страницу
+    .thanks-owner
+      div
+        span Третьякова Оксана Александровна
+        p владелица студии
+      img(src='img/thanks/owner.png', alt='owner')

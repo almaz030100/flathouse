@@ -4,9 +4,9 @@ if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUE
 }
 // Pre settings
 define("SND_FROM", "franch5.leads@gmail.com");
-define("SND_TO", "alex_martynov5@mail.ru"); // allowble comma-sepparated values
-define("SND_NAME", "«Форсаж»: заявка на франшизу");
-define("NAME_FRANCH", "«Форсаж»: заявка на франшизу");
+define("SND_TO", "oksanatr10@yandex.ru"); // allowble comma-sepparated values
+define("SND_NAME", "FLATHOUSEDESIGN: заявка на франшизу");
+define("NAME_FRANCH", "FLATHOUSEDESIGN: заявка на франшизу");
 define("SMTP", false); // see settings in Helper.php before you change this const
 define("SND_TO_BITRIX", false); // Разрешить отправку лидов в Битрикс. true - отправляем, false - запрещаем
 

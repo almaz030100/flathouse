@@ -1,14 +1,13 @@
 .form-input  {
-  height: int(60,80);
+  height: int(60,90);
   width: 100%;
-  background: left 15px top 50% no-repeat, #F0F0F0;
-  border-radius: 7px;
+  background: left 15px top 50% no-repeat, #fff;
   border-style: none;
-  padding-left: 45px;
+  padding-left: 62px;
   padding-right: 10px;
-  font-size: 15px;
+  font-size: 16px;
   &::placeholder {
-    color: rgba(75, 78, 83, 0.5);
+    color: #868892;
   }
   &[name="phone"] {
     background-image: url('../img/form/phone.svg');
@@ -22,56 +21,45 @@
 }
 
 .openform {
-  margin-top: int(40,75);
-  border-radius: 25px;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
-  background: rgb(255, 255, 255);
-  padding: int(30,50) int(20,50);
-
-  .form-policy {
-    margin: 20px auto 0;
-    max-width: 1015px;
+  margin-top: 30px;
+  background: #F6F6F6;
+  padding: int(20,40);
+  button {
+    height: int(60,90);
+    span {
+      font-size: int(15,18);
+    }
   }
 }
 
 .openform-title {
-  color: rgb(224, 166, 49);
-  font-size: int(24,32);
-  font-weight: 700;
+  font-family: "Tenor Sans", sans-serif;
+  font-size: int(22,32);
   text-align: center;
 }
 
-.openform-inputs {
-  margin-top: int(30,50);
+.openform-inputs-wrapper {
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: int(10,20);
-  @include media(991) {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 311fr) 345fr;
+  gap: 14px;
+  @include m(991) {
+    grid-template-columns: 1fr 1fr;
   }
-  @include media(575) {
+  @include m(575) {
     grid-template-columns: 100%;
   }
 }
 
-.openform-button {
-  width: 100%;
-  height: int(60,80);
-  span {
-    font-size: 14px;
-  }
-}
-
 .form-policy {
+  margin-top: 20px;
   display: flex;
   align-items: flex-start;
-  gap: 11px;
-  opacity: 0.3;
-  font-size: 11px;
-  font-weight: 500;
+  gap: 8px;
+  color: #868892;
   img {
     position: relative;
-    bottom: 7px;
+    bottom: 3px;
   }
   a {
     text-decoration: underline;

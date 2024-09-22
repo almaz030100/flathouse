@@ -1,0 +1,79 @@
+.footer {
+  background: #19191B;
+  padding: 40px 0;
+  color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-left {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-city {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-russia {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.footer-policy {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.footer-f5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+@include m(991) {
+  .footer-logo {
+    width: 80px;
+  }
+}
+
+@include m(767) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+}
+
+@include m(575) {
+  .footer-right {
+    align-items: center;
+  }
+  .footer-left {
+    align-items: center;
+  }
+}

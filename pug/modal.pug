@@ -1,4 +1,4 @@
-mixin modal(id, title, button)
+mixin modal(id, title, button, img)
   .modal(id=id)
     .modal-wrapper
       form
@@ -7,7 +7,8 @@ mixin modal(id, title, button)
           include form-input-phone
           include form-input-name
           include form-input-email
-        .modal-bottom-wrapper
-          button.button.modal-button
+          button.btn.modal-button
             span= button
           include form-policy
+
+    img.modal-img(src=img, alt='img')
